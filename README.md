@@ -1,10 +1,6 @@
-# calling-card
+# Calling Card
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+App to keep all your contact data in one place and always available for sharing.
 
 ## Customize configuration
 
@@ -33,3 +29,7 @@ npm run build
 ```sh
 npm run lint
 ```
+
+---
+
+###### [Vue](https://vuejs.org/guide/quick-start.html) is used
