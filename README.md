@@ -2,6 +2,9 @@
 
 App to keep all your contact data in one place and always available for sharing.
 
+![version](https://img.shields.io/badge/version-0.0.1-orange)
+![build](https://github.com/vchychuzhko/calling-card/actions/workflows/deploy.yml/badge.svg)
+
 ## Customize configuration
 
 See [Vite Configuration Reference](https://vite.dev/config/).
