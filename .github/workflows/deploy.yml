@@ -1,0 +1,42 @@
+name: Build and Deploy to branch
+
+# Trigger the workflow manually
+on:
+  workflow_dispatch:
+
+# Grant write permission to the workflow
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the code from the master branch
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Build the app
+      - name: Build project
+        run: npm run build
+
+      # Step 5: Deploy the dist folder to a separate branch
+      - name: Deploy to branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: build # Branch where `dist` will be saved
+          publish_dir: ./dist # Path to the build output folder
